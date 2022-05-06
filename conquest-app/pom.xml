@@ -31,14 +31,19 @@
     <description>ONOS OSGi bundle archetype</description>
     <url>http://onosproject.org</url>
 
+
     <properties>
-        <onos.app.name>org.foo.app</onos.app.name>
-        <onos.app.title>Foo App</onos.app.title>
-        <onos.app.origin>Foo, Inc.</onos.app.origin>
+        <onos.app.name>org.princeton.conquest-app</onos.app.name>
+        <onos.app.title>ConQuest App</onos.app.title>
+        <onos.app.origin>Princeton University</onos.app.origin>
         <onos.app.category>default</onos.app.category>
-        <onos.app.url>http://onosproject.org</onos.app.url>
+        <onos.app.url>http://cs.princeton.edu/</onos.app.url>
         <onos.app.readme>ONOS OSGi bundle archetype.</onos.app.readme>
+        <trellis.api.groupId>org.onosproject</trellis.api.groupId>
+        <trellis.api.artifactId>segmentrouting-api</trellis.api.artifactId>
+        <trellis.api.version>3.3.0-SNAPSHOT</trellis.api.version>
     </properties>
+
 
     <dependencies>
         <dependency>
@@ -63,11 +68,31 @@
         </dependency>
 
         <dependency>
+            <groupId>${trellis.api.groupId}</groupId>
+            <artifactId>${trellis.api.artifactId}</artifactId>
+            <version>${trellis.api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
             <groupId>org.onosproject</groupId>
             <artifactId>onos-api</artifactId>
             <version>${onos.version}</version>
             <scope>test</scope>
             <classifier>tests</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>org.onosproject</groupId>
+            <artifactId>onos-cli</artifactId>
+            <version>${onos.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.karaf.shell</groupId>
+            <artifactId>org.apache.karaf.shell.console</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -85,6 +110,17 @@
                     <skip>true</skip>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Karaf-Commands>org.princeton.conquest.cli</Karaf-Commands>
+                    </instructions>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
