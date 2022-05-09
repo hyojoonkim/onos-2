@@ -108,7 +108,7 @@ control FabricEgress (inout parsed_headers_t hdr,
 
     PacketIoEgress() pkt_io_egress;
     EgressNextControl() egress_next;
-    EgressDscpRewriter() dscp_rewriter;
+    //EgressDscpRewriter() dscp_rewriter;
 #ifdef WITH_SPGW
     SpgwEgress() spgw;
 #endif // WITH_SPGW
@@ -126,7 +126,7 @@ control FabricEgress (inout parsed_headers_t hdr,
 #ifdef WITH_INT
         process_int_main.apply(hdr, fabric_metadata, standard_metadata);
 #endif
-    dscp_rewriter.apply(hdr, fabric_metadata, standard_metadata);
+    //dscp_rewriter.apply(hdr, fabric_metadata, standard_metadata);
     }
 }
 

@@ -146,8 +146,8 @@ public final class FabricConstants {
             PiTableId.of("FabricIngress.slice_tc_classifier.classifier");
     public static final PiTableId FABRIC_INGRESS_ACL_ACL =
             PiTableId.of("FabricIngress.acl.acl");
-    public static final PiTableId FABRIC_EGRESS_DSCP_REWRITER_REWRITER =
-            PiTableId.of("FabricEgress.dscp_rewriter.rewriter");
+    //public static final PiTableId FABRIC_EGRESS_DSCP_REWRITER_REWRITER =
+    //        PiTableId.of("FabricEgress.dscp_rewriter.rewriter");
     public static final PiTableId FABRIC_INGRESS_PRE_NEXT_NEXT_MPLS =
             PiTableId.of("FabricIngress.pre_next.next_mpls");
     public static final PiTableId FABRIC_INGRESS_FILTERING_INGRESS_PORT_VLAN =
@@ -275,8 +275,8 @@ public final class FabricConstants {
             PiActionId.of("FabricIngress.slice_tc_classifier.trust_dscp");
     public static final PiActionId FABRIC_INGRESS_PRE_NEXT_SET_DOUBLE_VLAN =
             PiActionId.of("FabricIngress.pre_next.set_double_vlan");
-    public static final PiActionId FABRIC_EGRESS_DSCP_REWRITER_REWRITE =
-            PiActionId.of("FabricEgress.dscp_rewriter.rewrite");
+    //public static final PiActionId FABRIC_EGRESS_DSCP_REWRITER_REWRITE =
+    //        PiActionId.of("FabricEgress.dscp_rewriter.rewrite");
     public static final PiActionId FABRIC_INGRESS_BNG_INGRESS_SET_LINE =
             PiActionId.of("FabricIngress.bng_ingress.set_line");
     public static final PiActionId FABRIC_INGRESS_BNG_INGRESS_UPSTREAM_TERM_DISABLED =
@@ -299,8 +299,8 @@ public final class FabricConstants {
             PiActionId.of("FabricIngress.spgw.load_pdr_qos");
     public static final PiActionId FABRIC_INGRESS_QOS_SET_QUEUE =
             PiActionId.of("FabricIngress.qos.set_queue");
-    public static final PiActionId FABRIC_EGRESS_DSCP_REWRITER_CLEAR =
-            PiActionId.of("FabricEgress.dscp_rewriter.clear");
+    //public static final PiActionId FABRIC_EGRESS_DSCP_REWRITER_CLEAR =
+    //        PiActionId.of("FabricEgress.dscp_rewriter.clear");
     public static final PiActionId FABRIC_EGRESS_EGRESS_NEXT_PUSH_VLAN =
             PiActionId.of("FabricEgress.egress_next.push_vlan");
     public static final PiActionId FABRIC_INGRESS_QOS_METER_DROP =
